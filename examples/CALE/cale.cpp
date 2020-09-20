@@ -44,8 +44,9 @@ void setup() {
   display.println("\nWiFi OK! Downloading...");
   display.partialUpdate();
 
-  //Draw image from CALE.es
-  if(!display.drawBitmapFromWeb(screenUrl, 0, 0, false)) {
+  // Draw image from CALE.es
+  // Note that 5th parameter is "invert" and I'm leaving it on true since otherwise renders the picture wrong
+  if(!display.drawBitmapFromWeb(screenUrl, 0, 0, false,true)) {
     //If is something failed (wrong filename or wrong bitmap format), write error message on the screen.
     //REMEMBER! You can only use Windows Bitmap file with color depth of 1, 4, 8 or 24 bits with no compression! 
     display.println("Image open error");

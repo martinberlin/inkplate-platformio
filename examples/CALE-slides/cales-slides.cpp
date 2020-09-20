@@ -11,7 +11,8 @@ Inkplate display(INKPLATE_3BIT);    //Create an object on Inkplate library and a
 
 // CALE.es screen URL:
 #define SCREEN_URL "http://img.cale.es/bmp/fasani/5ef94f52ad2f6"
-// Einkplate will sleep this minutes after rendering the image. Please don't make this shorter than once per hour since it's using our shared server!
+// Einkplate will sleep this minutes after rendering the image. 
+// Please don't make this shorter than once per hour since it's using our shared server!
 #define SLIDES_CHANGE_SECONDS 10
 
 char * screenUrl = SCREEN_URL;
