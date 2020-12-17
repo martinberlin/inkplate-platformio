@@ -10,7 +10,9 @@
 Inkplate display(INKPLATE_3BIT);    //Create an object on Inkplate library and also set library into 3 Bit mode (Grayscale)
 
 // CALE.es screen URL:
-#define SCREEN_URL "http://img.cale.es/bmp/fasani/5ef94f52ad2f6"
+#define SCREEN_URL "http://img.cale.es/bmp/fasani/5ef94f52ad2f6" //BMP 4 bits works partially
+//#define SCREEN_URL "http://img.cale.es/jpg/fasani/5ea1dec401890" // JPG 24 bits does not work at all
+
 // Einkplate will sleep this minutes after rendering the image. 
 // Please don't make this shorter than once per hour since it's using our shared server!
 #define SLIDES_CHANGE_SECONDS 30
