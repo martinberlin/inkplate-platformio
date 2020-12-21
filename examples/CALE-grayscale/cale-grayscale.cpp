@@ -3,19 +3,23 @@
    Modified by Martin to make it work with CALE.es web-service for ESP32 displays
    Added deepsleep functionality so it wakes up each N minutes and downloads a new image
 */
-
+// BMP Images: 
+// http://slosarek.eu/e/4-bit-1.bmp
+// http://slosarek.eu/e/4-bit-2.bmp    &  -3.bmp
 #include "Inkplate.h"               //Include Inkplate library to the sketch
 #include "HTTPClient.h"             //Include library for HTTPClient
 #include "WiFi.h"                   //Include library for WiFi
 Inkplate display(INKPLATE_3BIT);    //Create an object on Inkplate library and also set library into 3 Bit mode (Grayscale)
 
+#define SCREEN_URL "http://slosarek.eu/e/4-bit-1.bmp"
+
 // CALE.es screen URL:
-#define SCREEN_URL "http://img.cale.es/bmp/fasani/5ef94f52ad2f6" //BMP 4 bits works partially
+//#define SCREEN_URL "http://img.cale.es/bmp/fasani/5ef94f52ad2f6" //BMP 4 bits works partially
 //#define SCREEN_URL "http://img.cale.es/jpg/fasani/5ea1dec401890" // JPG 24 bits does not work at all. use 4 bits
 
 // Einkplate will sleep this minutes after rendering the image. 
 // Please don't make this shorter than once per hour since it's using our shared server!
-#define SLIDES_CHANGE_SECONDS 30
+#define SLIDES_CHANGE_SECONDS 180
 
 char * screenUrl = SCREEN_URL;
 uint64_t USEC = 1000000;
